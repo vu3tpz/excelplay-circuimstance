@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # False if not in os.environ
 #DEBUG = env('DEBUG')
-DEBUG = True
+DEBUG = False
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
 #SECRET_KEY = env('SECRET_KEY')
@@ -28,7 +28,7 @@ SECRET_KEY = secretkey
 # SECRET_KEY='excel2k19'
 
 ALLOWED_HOSTS = ['35.200.222.240', 'play-demo.excelmec.org',
-                 'play.excelmec.org', 'localhost']
+                 'play.excelmec.org', 'localhost', '*']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
