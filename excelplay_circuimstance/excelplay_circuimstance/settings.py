@@ -10,12 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+from secret import secretkey
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-from secret import secretkey
 
 # False if not in os.environ
 #DEBUG = env('DEBUG')
@@ -25,9 +25,10 @@ DEBUG = True
 #SECRET_KEY = env('SECRET_KEY')
 
 SECRET_KEY = secretkey
-#SECRET_KEY='excel2k19'
+# SECRET_KEY='excel2k19'
 
-ALLOWED_HOSTS = ['35.200.222.240', 'play-demo.excelmec.org','play.excelmec.org','localhost']
+ALLOWED_HOSTS = ['35.200.222.240', 'play-demo.excelmec.org',
+                 'play.excelmec.org', 'localhost']
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
@@ -90,7 +91,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'HOST': 'db5',
-        'PORT': 5436,
+        'PORT': 5432,
     }
 }
 
@@ -144,5 +145,3 @@ SESSION_REDIS = {
     'prefix': 'session',
     'socket_timeout': 10
 }
-
-
