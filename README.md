@@ -19,7 +19,7 @@ Follow the steps below to start the API server:
   ```
 - Run the dev server
   ```sh
-  $ python manage.py ma emigrations
+  $ python manage.py makemigrations
   $ python manage.py migrate
   $ python manage.py createsuperuser
   $ python manage.py runserver
